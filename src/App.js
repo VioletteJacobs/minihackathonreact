@@ -6,7 +6,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min"
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import components
-
+import Presentation from "./component/Presentation/Presentation"
 
 import react,  {Component, Fragment} from "react"
 import './App.css';
@@ -14,7 +14,7 @@ import './App.css';
 function App() {
   return (
     <Fragment>
-
+      <Presentation />
     </Fragment>
   );
 }
