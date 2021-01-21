@@ -6,7 +6,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min"
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import components
-
+import Header from "./component/header/Header"
+import Footer from "./component/footer/Footer"
 
 import react,  {Component, Fragment} from "react"
 import './App.css';
@@ -14,7 +15,8 @@ import './App.css';
 function App() {
   return (
     <Fragment>
-
+      <Header />
+      <Footer />
     </Fragment>
   );
 }

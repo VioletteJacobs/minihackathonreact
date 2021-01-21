@@ -1,0 +1,17 @@
+.sectionHeader{
+    background-image: url("./img/bannière.jpeg");
+    background-size: cover;
+    color:white;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+h1{
+    font-size: 100px;
+    color: #099EAD;
+}
+span{
+    font-size: 50px
+}
