@@ -1,0 +1,27 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #343A40;
+    color: white;
+    border-top: solid #099EAD 0.2px
+}
+.listeIcon{
+    display: flex;
+    
+}
+.icon{
+    text-decoration: none;
+    color:  #099EAD;
+    margin: 50px
+}
+
+.paddingOn{
+    color: white;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #099EAD
+}
+.paddingOff{
+    color:#099EAD;
+    border: none;
+}

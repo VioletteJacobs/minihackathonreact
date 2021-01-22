@@ -1,0 +1,51 @@
+/* nav{
+    height: 100px;
+    background-color: #099EAD;
+}
+.list{
+    list-style-type: none;
+    background-color:#099EAD;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+.items{
+    margin-right: 20px;
+    color: white;
+    cursor: pointer;
+}
+.buttonNav{
+    display: none;
+}
+@media screen and (max-width: 500px){
+    .list{
+        flex-direction: column;
+        height: 200px;
+    }
+    .items:nth-child(1){
+        border-top: 1px solid white;
+        margin-top: 50px
+    }
+    .items{
+        height: 50px;
+        width: 100%;
+        border-bottom: solid 1px white;
+        /* pour centrer le texte sur y mettre la même taille et même line-height */
+        /* line-height: 50px;
+        margin: 0;
+        text-align: center
+    }
+    .buttonNav{
+        display: block;
+        position: absolute;
+        right: 50px;
+        top:5px;
+        color: white;
+        cursor: pointer;
+        width: 50px;
+        background-color:#343A40;
+        border-radius: 5px;
+        border:none;
+    } */
