@@ -1,0 +1,33 @@
+.Promesse{
+    background-color: #303438;
+}
+
+.Promesse p {
+    width: 65%;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+.iconPromesse{
+    color: white;
+    font-size: 60px;
+}
+
+.brun{
+    color: rgb(160, 131, 97);
+}
+
+.maison{
+    color: rgb(224, 191, 180);
+}
+
+@media screen and (min-width:320px) and (max-width:599px) {
+    .iconPromesse{
+        font-size: 40px;
+    }
+
+    .Promesse p{
+        width: 90%;
+    }
+
+}
