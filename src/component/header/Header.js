@@ -53,7 +53,6 @@ export default function Header() {
                         <Link to="/Contacts">
                             <li className="items">Contacts</li>
                         </Link>
-
                     </ul>
                 )}
                 <button onClick={toggleMenuSmallScreen} className="buttonNav"><FontAwesomeIcon icon={faSortDown} /></button>
@@ -61,7 +60,9 @@ export default function Header() {
             <section className="sectionHeader">
                 <h1 className="titleHeader">Livraison KV</h1>
                 <span className="spanheader">Service de livraison partout, quand vous voulez</span>
-                <button className="buttonHeader">Vous faire livrer</button>
+                <Link to="/Contacts">
+                    <button className="buttonHeader">Vous faire livrer</button>
+                </Link>
             </section>
             <Switch>
                 <Route path="/Temoignages">
@@ -74,7 +75,6 @@ export default function Header() {
                     <Presentation />
                     <Promesse />
                 </Route>
-
             </Switch>
             </Router>
         </Fragment>

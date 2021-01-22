@@ -25,9 +25,9 @@ export class Input extends Component {
             nom:"",
             adresse:"",
             nombreColis:"",
-            typecolis:"",
+            typeColis:"",
             // permet de remettre le form à zéro mais de préserver les données écrites via un spread operator
-            items:[...this.state.items, {nom: this.state.nom, age:this.state.age, profession:this.state.profession}]
+            items:[...this.state.items, {prenom: this.state.prenom, nom: this.state.nom, adresse: this.state.adresse, nombreColis: this.state.nombreColis, typeColis: this.state.typeColis}]
         });
     }
 
@@ -36,15 +36,16 @@ export class Input extends Component {
         return this.state.items.map((items, index) => {
             return(
                 <div className="card" key={index}>
-                    <div className="cardBody">
-                        <p> 
-                            Bonjour {items.prneom}, vous avez demandé une livraison de {items.nombreColis} colis à l'adresse suivante: {items.adresse}. Vos colis sont de types {items.typeColis}
+                    <div className="cardBody w-100">
+                        <p className="confirmation"> 
+                            Bonjour <span className="spanConfirmation">{items.prenom}</span>, vous avez demandé une livraison de <span className="spanConfirmation">{items.nombreColis}</span> colis à l'adresse suivante: <span className="spanConfirmation">{items.adresse}</span>.
                         </p>
                     </div>
                 </div>
             )
         })
     }
+
 
     render() {
         return (
@@ -54,57 +55,86 @@ export class Input extends Component {
                     <div className="CardHeader"> 
                         <span className="spanForm">Ajouter une livraison</span> 
                     </div>
-                    <div className="cardBody">
+                    <div className="cardBody w-100 justify-content-center">
 
                         <form onSubmit={this.onSubmit}>
 
-                            <div className="formGroup">
-
-                                <label className="labelForm" htmlFor="preom">Prénom : </label>
-                                <input className="inputForm" type="text" name="prenom"
-                                onChange={this.onChange}
-                                value= {this.state.prenom}
-                                />
+                            <div className="formGroup row">
+                                <div className=" col-12 d-flex d-sm-block row">
+                                    <div className="col-lg-3 col-md-12 col-sm-12 d-flex justicy-content-center align-items-center justify-content-sm-center">
+                                        <label className="labelForm " htmlFor="preom">Prénom : </label>
+                                    </div>
+                                    <div className="col-lg-9 col-md-12 col-sm-12">
+                                        <input onClick ={(e)=>{e.target.classList.toggle("bginput")}}className="inputForm"type="text" name="prenom"
+                                    onChange={this.onChange}
+                                    value= {this.state.prenom}
+                                    />
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="formGroup">
-
-                                <label className="labelForm" htmlFor="nom">Nom : </label>
-                                <input className="inputForm" type="text" name="nom"
-                                onChange={this.onChange}
-                                value= {this.state.nom}
-                                />
+                                <div className=" col-12 d-flex d-sm-block row">
+                                    <div className="col-lg-3 col-md-12 col-sm-12 d-flex justicy-content-center align-items-center justify-content-sm-center">
+                                        <label className="labelForm " htmlFor="nom">Nom : </label>
+                                    </div>
+                                    <div className="col-lg-9 col-md-12 col-sm-12">
+                                        <input onClick ={(e)=>{e.target.classList.toggle("bginput")}}className="inputForm"type="text" name="nom"
+                                    onChange={this.onChange}
+                                    value= {this.state.nom}
+                                    />
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="formGroup">
-
-                                <label className="labelForm" htmlFor="Adresse">Adresse : </label>
-                                <input className="inputForm" type="text" name="adresse"
-                                onChange={this.onChange}
-                                value= {this.state.adresse}
-                                />
+                                <div className=" col-12 d-flex d-sm-block row">
+                                    <div className="col-lg-3 col-md-12 col-sm-12 d-flex justicy-content-center align-items-center justify-content-sm-center">
+                                        <label className="labelForm " htmlFor="adresse">Adresse : </label>
+                                    </div>
+                                    <div className="col-lg-9 col-md-12 col-sm-12">
+                                        <input onClick ={(e)=>{e.target.classList.toggle("bginput")}}className="inputForm"type="text" name="adresse"
+                                    onChange={this.onChange}
+                                    value= {this.state.adresse}
+                                    />
+                                    </div>
+                                </div>
                             </div>
+
                             <div className="formGroup">
-
-                                <label className="labelForm" htmlFor="Adresse">Nombre de colis : </label>
-                                <input className="inputForm" type="number" name="nombreColis"
-                                onChange={this.onChange}
-                                value= {this.state.nombreColis}
-                                />
-                            </div>
-                            <div className="form-group">
-
-                                <label className="labelForm" htmlFor="exampleFormControlSelect1">Type de colis : </label>
-                                <select className="form-control selectForm" id="exampleFormControlSelect1">
-                                <option>Frais</option>
-                                <option>Electroménager</option>
-                                <option>Meubles</option>
-                                <option>Fragile</option>
-                                <option>Urgent</option>
-                                </select>
+                                <div className=" col-12 d-flex d-sm-block row">
+                                    <div className="col-lg-3 col-md-12 col-sm-12 d-flex justicy-content-center align-items-center justify-content-sm-center">
+                                        <label className="labelForm " htmlFor="adresse">Nombre de colis : </label>
+                                    </div>
+                                    <div className="col-lg-9 col-md-12 col-sm-12">
+                                        <input onClick ={(e)=>{e.target.classList.toggle("bginput")}}className="inputForm"type="number" name="nombreColis"
+                                    onChange={this.onChange}
+                                    value= {this.state.nombreColis}
+                                    />
+                                    </div>
+                                </div>
                             </div>
 
-                            <button className="buttonForm">Confirmer votre livraison</button>
+                            <div className="formGroup">
+                                <div className=" col-12 d-flex d-sm-block row">
+                                    <div className="col-lg-3 col-md-12 col-sm-12 d-flex justicy-content-center align-items-center justify-content-sm-center">
+                                        <label className="labelForm " htmlFor="typeColis">Type de colis : </label>
+                                    </div>
+                                    <div className="col-lg-9 col-md-12 col-sm-12">
+                                    <select onClick ={(e)=>{e.target.classList.toggle("bginput")}} className="form-control selectForm typeColis" id="exampleFormControlSelect1">
+                                        <option>Frais</option>
+                                        <option>Electroménager</option>
+                                        <option>Meubles</option>
+                                        <option>Fragile</option>
+                                        <option>Urgent</option>
+                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div className="buttonDiv">
+                                <button className="buttonForm">Confirmer votre livraison</button>
+                            </div>
 
                         </form>
                     </div>
