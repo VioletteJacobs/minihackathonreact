@@ -9,6 +9,7 @@ import Form from "../form/Form";
 import Temoignages from "../Temoignages/Temoignage"
 import Presentation from "../Presentation/Presentation";
 import Promesse from "../promesse/Promesse";
+import Offre from "../Offre/Offre";
 import "./Header.css";
 
 
@@ -44,7 +45,7 @@ export default function Header() {
                         <Link to="/">
                             <li className="items">Présentation</li>
                         </Link>
-                        <Link to ="/Promesse">
+                        <Link to ="/Offre">
                             <li className="items">Notre offre</li>
                         </Link>
                         <Link to="/Temoignages">
@@ -64,6 +65,9 @@ export default function Header() {
                 <button className="buttonHeader">Vous faire livrer</button>
             </section>
             <Switch>
+                <Route path="/Offre">
+                    <Offre />
+                </Route>
                 <Route path="/Temoignages">
                    <Temoignages />
                 </Route>

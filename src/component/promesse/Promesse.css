@@ -57,13 +57,13 @@
 }
 
 @keyframes camionOver {
-    0%      {left:0px}
-    50%     {left:100px}
-    100%    {left: 200px}
+    0%      {left:0%}
+    50%     {left:5%}
+    100%    {left: 10%}
 }
 
 @keyframes camionOut {
-    0%      {left: 200px}
-    50%     {left: 100px}
-    100%    {left:0px}
+    0%      {left: 10%}
+    50%     {left: 5%}
+    100%    {left:0%}
 }
