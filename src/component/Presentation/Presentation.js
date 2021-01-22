@@ -4,7 +4,7 @@ import Carousel from "./Carousel"
 
 export default function Presentation() {
     return (
-        <div className="container-fluidgit ">
+        <div className="container-fluid">
             <div className="d-flex row noir Presentation">
                 <div className="col-lg-6 col-md-12 col-sm-12">
                     <Carousel />
