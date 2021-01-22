@@ -1,4 +1,26 @@
 body{
   width: 80%;
   margin: 0 auto;
+  cursor: none;
+}
+.cursorPerso{
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  /* pour pouvoir continuer à cliqué sur les éléments que l'on souhaite et pas juste sur cette div.  */
+  pointer-events:none
+
+}
+.cursorPerso::before{
+  content:"";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: black;
 }

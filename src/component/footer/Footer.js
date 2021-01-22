@@ -24,7 +24,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div>
-                    <span>
+                    <span className= "copyright">
                         © copyright KevletteDev
                     </span> 
                 </div>
