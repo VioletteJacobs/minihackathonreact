@@ -44,11 +44,15 @@
 
 .animCamionOver{
     position: relative;
+    transition: 1500ms;
+    color: rgb(160, 131, 97);
     animation: camionOver 2s forwards;
 }
 
 .animCamionOut{
     position: relative;
+    transition: 1500ms;
+    color: white;
     animation: camionOut 2s forwards;
 }
 
@@ -59,7 +63,7 @@
 }
 
 @keyframes camionOut {
-    0%      {right:0px}
-    50%     {right: 100px}
-    100%    {right:200px}
+    0%      {left: 200px}
+    50%     {left: 100px}
+    100%    {left:0px}
 }

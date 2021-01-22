@@ -21,6 +21,11 @@ export default function Promesse() {
             icon[2].classList.toggle("animCamionOver")
             icon[2].classList.remove("animCamionOut")
         }, 2000);
+        setTimeout(() => {
+            icon[3].classList.toggle("animOver")
+            icon[3].classList.remove("animOut")
+        }, 3000);
+
 
     })
     
@@ -37,6 +42,10 @@ export default function Promesse() {
             icon[2].classList.toggle("animCamionOver")
         }, 2000);
 
+        setTimeout(() => {
+            icon[3].classList.toggle("animOut")
+            icon[3].classList.toggle("animOver")
+        }, 3000);
     })
     
     return (
