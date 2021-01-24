@@ -12,6 +12,13 @@ h2{
     padding: 30px 15px;
     color: white;
 }
+.dNone{
+    display: none
+}
+.desplayBlock{
+    display: block;
+}
+
 /* @media screen and (max-width: 500px){
     .Temoignages{
         text-align: center;

@@ -9,6 +9,7 @@ import Form from "../form/Form";
 import Temoignages from "../Temoignages/Temoignage"
 import Presentation from "../Presentation/Presentation";
 import Promesse from "../promesse/Promesse";
+import Offre from "../Offre/Offre";
 import "./Header.css";
 
 
@@ -44,7 +45,7 @@ export default function Header() {
                         <Link to="/">
                             <li className="items">Présentation</li>
                         </Link>
-                        <Link to ="/Promesse">
+                        <Link to ="/Offre">
                             <li className="items">Notre offre</li>
                         </Link>
                         <Link to="/Temoignages">
@@ -53,7 +54,6 @@ export default function Header() {
                         <Link to="/Contacts">
                             <li className="items">Contacts</li>
                         </Link>
-
                     </ul>
                 )}
                 <button onClick={toggleMenuSmallScreen} className="buttonNav"><FontAwesomeIcon icon={faSortDown} /></button>
@@ -61,9 +61,14 @@ export default function Header() {
             <section className="sectionHeader">
                 <h1 className="titleHeader">Livraison KV</h1>
                 <span className="spanheader">Service de livraison partout, quand vous voulez</span>
-                <button className="buttonHeader">Vous faire livrer</button>
+                <Link to="/Contacts">
+                    <button className="buttonHeader">Vous faire livrer</button>
+                </Link>
             </section>
             <Switch>
+                <Route path="/Offre">
+                    <Offre />
+                </Route>
                 <Route path="/Temoignages">
                    <Temoignages />
                 </Route>
@@ -74,7 +79,6 @@ export default function Header() {
                     <Presentation />
                     <Promesse />
                 </Route>
-
             </Switch>
             </Router>
         </Fragment>

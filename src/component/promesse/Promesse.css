@@ -31,3 +31,39 @@
     }
 
 }
+
+.animOver{
+    transition: 1500ms;
+    color: rgb(160, 131, 97);
+}
+
+.animOut{
+    transition: 1500ms;
+    color: white;
+}
+
+.animCamionOver{
+    position: relative;
+    transition: 1500ms;
+    color: rgb(160, 131, 97);
+    animation: camionOver 2s forwards;
+}
+
+.animCamionOut{
+    position: relative;
+    transition: 1500ms;
+    color: white;
+    animation: camionOut 2s forwards;
+}
+
+@keyframes camionOver {
+    0%      {left:0%}
+    50%     {left:5%}
+    100%    {left: 10%}
+}
+
+@keyframes camionOut {
+    0%      {left: 10%}
+    50%     {left: 5%}
+    100%    {left:0%}
+}
